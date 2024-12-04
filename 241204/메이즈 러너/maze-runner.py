@@ -53,7 +53,8 @@ for k in range(1, K+1):
     diff_dist = 2*(N+1)
     for part_idx in participant:
         diff_dist = min(diff_dist ,max(abs(participant[part_idx][0] - exit_pos[0]), abs(participant[part_idx][1] - exit_pos[1])))
-    
+    if diff_dist == 2*(N+1):
+        break
     r, c = get_min_pos(diff_dist)
 
     temp_arr = [arr[tr][c:c+diff_dist+1] for tr in range(r, r+diff_dist+1)]
