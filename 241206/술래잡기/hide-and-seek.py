@@ -57,6 +57,7 @@ for t in range(1, k+1):
     # 제거하자
     for mul in range(3):
         tr, tc = si +dr[sd] * mul, sj +dc[sd]*mul
+        if tr <0 or tr>=n or tc<0 or tc>=n: continue
         if arr[tr][tc] == -1: continue #나무 일 때
 
         for runner_idx in list(runner.keys()):
