@@ -53,8 +53,8 @@ for t in range(1, k+1):
         turn_cnt=0
         turn_idx=0
         for runner_idx in runner:
-            runner[runner_idx][2] = (runner[runner_idx][2]+1)%4
-        
+            runner[runner_idx][2] = (3-runner[runner_idx][2])
+
     elif turn_cnt == turn[turn_idx]:
         sd =(sd+1)%4
         turn_cnt=0
