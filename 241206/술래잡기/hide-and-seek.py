@@ -46,9 +46,12 @@ for t in range(1, k+1):
     turn_cnt+=1
     if (si, sj) == (0,0) or (si, sj) == (n//2, n//2):
         turn = turn[::-1]
-        sd = (sd+2)%4
+        sd = (sd+1)%2
+        dr=dr[::-1]
+        dc=dc[::-1]
         turn_cnt=0
         turn_idx=0
+
     elif turn_cnt == turn[turn_idx]:
         sd =(sd+1)%4
         turn_cnt=0
