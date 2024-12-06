@@ -34,6 +34,7 @@ for t in range(1, k+1):
 
         if 0<=nr<n and 0<=nc<n: # 좌표 내 이면
             runner[runner_idx] = [nr, nc, d]
+
         else: # 좌표 바깥이면
             nd = (d+2)%4
             nr = ci + dr[nd]
@@ -51,7 +52,9 @@ for t in range(1, k+1):
         dc=dc[::-1]
         turn_cnt=0
         turn_idx=0
-
+        for runner_idx in runner:
+            runner[runner_idx][2] = (runner[runner_idx][2]+1)%4
+        
     elif turn_cnt == turn[turn_idx]:
         sd =(sd+1)%4
         turn_cnt=0
